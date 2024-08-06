@@ -1,16 +1,10 @@
 import prompt
-import random
 
 
-def createQuestionAnswer():
-    number = random.randint(1, 100)
-    return [number, 'yes'] if number % 2 == 0 else [number, 'no']
-
-
-def even_game():
+def play_game(start_question, createQuestionAnswer):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print(start_question)
     count = 0
     while (count < 3):
         count += 1
@@ -21,6 +15,6 @@ def even_game():
             print('Correct!')
         else:
             print(f'\'{value}\' is wrong answer ;(. Correct answer was \'{result}\'.')
-            print('Let\'s try again, Bill!')
+            print(f'Let\'s try again, {name}!')
             return
     print(f'Congratulations, {name}!')
