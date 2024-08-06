@@ -1,12 +1,13 @@
 import prompt
 
 
-def play_game(start_question, createQuestionAnswer):
+def play_game(start_question, createQuestionAnswer, max_round=3):
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
     print(start_question)
     count = 0
-    while (count < 3):
+    while (count < max_round):
         count += 1
         question, result = createQuestionAnswer()
         print(f'Question: {question}')
