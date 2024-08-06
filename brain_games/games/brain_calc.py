@@ -11,7 +11,8 @@ def createQuestionAnswer():
     number2 = random_integer()
     operations = ['+', '-', '*']
     random_operation = random_integer(0, 2)
-    question_string = f'{str(number1)} {operations[random_operation]} {str(number2)}'
+    simbol = operations[random_operation]
+    question_string = f'{str(number1)} {simbol} {str(number2)}'
     if (random_operation == 0):
         result_question = number1 + number2
     elif (random_operation == 1):

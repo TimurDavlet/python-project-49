@@ -1,6 +1,9 @@
 import prompt
 
 
+error_text = 'is wrong answer ;(. Correct answer was'
+
+
 def play_game(start_question, createQuestionAnswer, max_round=3):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
@@ -15,7 +18,7 @@ def play_game(start_question, createQuestionAnswer, max_round=3):
         if (value == result):
             print('Correct!')
         else:
-            print(f'\'{value}\' is wrong answer ;(. Correct answer was \'{result}\'.')
+            print(f'\'{value}\' {error_text} \'{result}\'.')
             print(f'Let\'s try again, {name}!')
             return
     print(f'Congratulations, {name}!')

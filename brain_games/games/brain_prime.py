@@ -3,7 +3,8 @@ from brain_games.random_number_generator import random_integer
 from functools import partial
 
 
-start_question = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+question = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+start_question = question
 
 
 def createQuestionAnswer():
